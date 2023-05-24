@@ -9,6 +9,16 @@ export const getItems:RequestHandler = async (req, res, next) => {
         next(error)
     }
 };
+
+
+
+
+
+
+
+
+
+
 export const getItem:RequestHandler = async (req, res, next) => {
     const itemId = req.params.itemId;
 
@@ -20,10 +30,14 @@ export const getItem:RequestHandler = async (req, res, next) => {
         next(error)
     }
 };
+
+
+
+
+
+
 export const createItem:RequestHandler = async (req, res, next) => {
     const item = req.body.item;
-
-    console.log('item', item)
 
     try{
         const newItem = await ToDoItemModel.create({

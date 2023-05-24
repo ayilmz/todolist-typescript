@@ -1,11 +1,21 @@
+### GET ALL ITEMS
 GET http://localhost:5050/api/items
 
+### GET ONE ITEM
+GET http://localhost:5050/api/items/646d3f9dcdba835951b289df
 
-
-### UPDATE ITEM
-PATCH http://localhost:5050/api/items/646d2eb1b8b18973fc35a39f
+### CREATE NEW ITEM
+POST http://localhost:5050/api/items
 Content-Type: application/json
 
 {
-  "item": "ayilmaz"
+  "item": "tech-talk mern"
+}
+
+### UPDATE ITEM
+PATCH http://localhost:5050/api/items/646df818be7965a6387f1314
+Content-Type: application/json
+
+{
+  "item": "react.js"
 }
