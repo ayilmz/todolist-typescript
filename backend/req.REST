@@ -1,0 +1,11 @@
+GET http://localhost:5050/api/items
+
+
+
+### UPDATE ITEM
+PATCH http://localhost:5050/api/items/646d2eb1b8b18973fc35a39f
+Content-Type: application/json
+
+{
+  "item": "ayilmaz"
+}
