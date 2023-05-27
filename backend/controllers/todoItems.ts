@@ -3,7 +3,7 @@ import {RequestHandler} from "express";
 
 export const getItems:RequestHandler = async (req, res, next) => {
     try {
-        const todoItems = await ToDoItemModel.find().exec();
+        const todoItems = await ToDoItemModel.find({});
         res.status(200).json(todoItems);
     }catch (error) {
         next(error)
@@ -55,15 +55,10 @@ interface UpdateItemBody {
     item?:string
 }
 export const updateItem:RequestHandler<UpdateItemParams, unknown, UpdateItemBody, unknown> = async (req, res, next) => {
-    const itemId = req.params.itemId;
-    const newItem = req.body.item;
     try {
 
-        const willUpdate = await ToDoItemModel.findById(itemId).exec();
-        willUpdate?.set({"item": newItem})
-
-        const updatedItem = await willUpdate?.save();
-        res.status(200).json(updatedItem)
+        await ToDoItemModel.findByIdAndUpdate(req.params.itemId, {$set: req.body});
+        res.status(200).json('Item Updated')
     }catch (error) {
         next(error)
     }
