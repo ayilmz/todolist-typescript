@@ -19,3 +19,6 @@ Content-Type: application/json
 {
   "item": "react.js"
 }
+
+### DELETE ITEM
+DELETE http://localhost:5050/api/items/646df818be7965a6387f1314

@@ -68,3 +68,15 @@ export const updateItem:RequestHandler<UpdateItemParams, unknown, UpdateItemBody
         next(error)
     }
 }
+
+export const deleteItem: RequestHandler = async (req, res, next) => {
+    const itemId = req.params.itemId;
+
+    try{
+        await ToDoItemModel.findByIdAndDelete(itemId);
+        res.sendStatus(200).json('Item Deleted')
+
+    }catch (error) {
+        next(error)
+    }
+}

@@ -14,4 +14,6 @@ router.post("/", ToDoItemController.createItem);
 
 router.patch("/:itemId", ToDoItemController.updateItem);
 
+router.delete('/:itemId', ToDoItemController.deleteItem);
+
 export default router;
