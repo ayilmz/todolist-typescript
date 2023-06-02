@@ -1,11 +1,11 @@
 ### GET ALL ITEMS
-GET http://localhost:5050/api/items
+GET http://localhost:5500/api/items
 
 ### GET ONE ITEM
-GET http://localhost:5050/api/items/646d3f9dcdba835951b289df
+GET http://localhost:5500/api/items/646d3f9dcdba835951b289df
 
 ### CREATE NEW ITEM
-POST http://localhost:5050/api/items
+POST http://localhost:5500/api/items
 Content-Type: application/json
 
 {
@@ -13,12 +13,12 @@ Content-Type: application/json
 }
 
 ### UPDATE ITEM
-PATCH http://localhost:5050/api/items/646df818be7965a6387f1314
+PATCH http://localhost:5500/api/items/64791009311cce10a622bf02
 Content-Type: application/json
 
 {
-  "item": "react.js"
+  "item": "react2.js"
 }
 
 ### DELETE ITEM
-DELETE http://localhost:5050/api/items/646df818be7965a6387f1314
+DELETE http://localhost:5500/api/items/6479ca62311cce10a622bfd4
