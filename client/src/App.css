@@ -1,0 +1,34 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.item-list span {
+  width: 200px;
+  display: inline-block;
+  font-size: 14px;
+}
+.item-list * {
+  padding: 10px;
+  margin: 0 5px;
+}
+
+form input {
+  font-size: 14px;
+  text-align: center;
+  padding: 5px !important;
+}
+
+.update-new-btn{
+  float: right;
+}
+
+form.add-item-form button{
+  padding: 5px 10px;
+  color: white;
+  font-size: 12px;
+  margin: 10px;
+  background-color: green;
+}
